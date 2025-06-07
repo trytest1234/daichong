@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>手游代充下单</title>
+  <style>
+    body { font-family: sans-serif; max-width: 500px; margin: 50px auto; }
+    img { width: 200px; margin-top: 20px; }
+    input, textarea, button {
+      width: 100%; margin: 10px 0; padding: 10px; font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h2>手游代充下单页面</h2>
+  <form action="https://formspree.io/f/mwkglkqa" method="POST">
+    <label>游戏名：</label>
+    <input type="text" name="game" required />
+
+    <label>游戏账号：</label>
+    <input type="text" name="account" required />
+
+    <label>充值金额：</label>
+    <input type="text" name="amount" required />
+
+    <label>其他说明：</label>
+    <textarea name="note"></textarea>
+
+    <button type="submit">提交订单</button>
+  </form>
+
+  <h3>请扫码付款：</h3>
+  <img src="weixin-qrcode.jpg" alt="微信收款码" />
+</body>
+</html>
