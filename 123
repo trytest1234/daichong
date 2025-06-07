@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>手游代充服务平台</title>
+<style>
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 0;
+    background: #f9fafb;
+    color: #222;
+  }
+  header {
+    background: #0066ff;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+  }
+  nav {
+    background: #004bb5;
+    padding: 10px 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  section {
+    margin-bottom: 50px;
+  }
+  h2 {
+    border-bottom: 2px solid #0066ff;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  .game-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+  }
+  .game-card {
+    background: white;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    border-radius: 8px;
+    width: 240px;
+    padding: 15px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+  }
+  .game-card:hover {
+    box-shadow: 0 4px 15px rgb(0 0 0 / 0.15);
+  }
+  .game-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+  .game-card h3 {
+    margin: 0 0 12px 0;
+  }
+  .price-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+  .price-list li {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+  }
+  .process-steps ol {
+    padding-left: 20px;
+  }
+  footer {
+    background: #222;
+    color: #bbb;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>智能手游代充平台</h1>
+</header>
+
+<nav>
+  <a href="#games">游戏列表</a>
+  <a href="#prices">价格说明</a>
+  <a href="#process">充值流程</a>
+</nav>
+
+<main>
+
+  <section id="games">
+    <h2>支持的游戏</h2>
+    <div class="game-list">
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Genshin_Impact_logo.svg/1200px-Genshin_Impact_logo.svg.png" alt="原神" />
+        <h3>原神 (Genshin Impact)</h3>
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/8/8c/Mobile_Legends_Logo.png" alt="Mobile Legends" />
+        <h3>Mobile Legends</h3>
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/9/99/Free_Fire_Logo.png" alt="Free Fire" />
+        <h3>Free Fire</h3>
+      </div>
+      <!-- 你可以继续添加更多游戏 -->
+    </div>
+  </section>
+
+  <section id="prices">
+    <h2>原神充值价格示例</h2>
+    <ul class="price-list">
+      <li>原石 60颗 - RM 20.00</li>
+      <li>原石 300颗 - RM 98.00</li>
+      <li>原石 980颗 - RM 320.00</li>
+      <li>原石 1980颗 - RM 600.00</li>
+    </ul>
+  </section>
+
+  <section id="process" class="process-steps">
+    <h2>充值流程说明</h2>
+    <ol>
+      <li>访问网站并注册/登录账户</li>
+      <li>选择游戏和充值套餐</li>
+      <li>填写游戏账号 UID 或角色信息</li>
+      <li>选择支付方式并完成付款</li>
+      <li>等待充值完成，一般几分钟内到账</li>
+      <li>确认游戏内已到账，联系客服解决问题</li>
+    </ol>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2025 智能手游代充平台 版权所有
+</footer>
+
+</body>
+</html>
