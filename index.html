@@ -1,56 +1,88 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <title>手游代充下单</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>智能手游代充平台</title>
   <style>
-    body { font-family: sans-serif; max-width: 500px; margin: 50px auto; }
-    img { width: 200px; margin-top: 20px; }
-    input, textarea, button {
-      width: 100%; margin: 10px 0; padding: 10px; font-size: 16px;
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f9fafb;
+      color: #222;
+      margin: 0; padding: 0;
     }
+    header { background: #0066ff; color: white; padding: 20px; text-align: center; }
+    nav { background: #004bb5; padding: 10px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: 600; }
+    main { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+    .game-card {
+      background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px; display: flex; align-items: center;
+      padding: 15px; margin-bottom: 25px;
+      transition: box-shadow 0.3s;
+    }
+    .game-card:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
+    .game-card img {
+      width: 120px; height: 120px; object-fit: contain;
+      margin-right: 20px;
+    }
+    .price-list li { padding: 6px 0; border-bottom: 1px solid #eee; }
+    .process-steps ol { padding-left: 20px; }
+    footer { background: #222; color: #bbb; text-align: center; padding: 15px; }
   </style>
 </head>
 <body>
-  <h2>手游代充下单页面</h2>
-  <form action="https://formspree.io/f/mwkglkqa" method="POST">
-    <label>游戏名：</label>
-    <input type="text" name="game" required />
 
-    <label>游戏账号：</label>
-    <input type="text" name="account" required />
+  <header>
+    <h1>智能手游代充平台</h1>
+  </header>
+  <nav>
+    <a href="#games">游戏列表</a>
+    <a href="#prices">原神价格</a>
+    <a href="#process">充值流程</a>
+  </nav>
 
-    <label>充值金额：</label>
-    <input type="text" name="amount" required />
+  <main>
+    <section id="games">
+      <h2>支持的游戏</h2>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Genshin_Impact_logo.svg/1200px-Genshin_Impact_logo.svg.png" alt="原神" />
+        <div>
+          <h3>原神 (Genshin Impact)</h3>
+          <p>一款开放世界 RPG，拥有超高人气，支持原石充值服务。</p>
+        </div>
+      </div>
 
-    <label>其他说明：</label>
-    <textarea name="note"></textarea>
+      <!-- 类似地可以加入其他游戏，如 Mobile Legends、Free Fire 等 -->
+    </section>
 
-    <button type="submit">提交订单</button>
-  </form>
+    <section id="prices">
+      <h2>原神充值价格示例</h2>
+      <ul class="price-list">
+        <li>原石 60颗 - RM 20.00</li>
+        <li>原石 300颗 - RM 98.00</li>
+        <li>原石 980颗 - RM 320.00</li>
+        <li>原石 1980颗 - RM 600.00</li>
+      </ul>
+    </section>
 
-  <h3>请扫码付款：</h3>
-  <img src="weixin-qrcode.jpg" alt="微信收款码" />
-  <div class="game-product" id="genshin-impact">
-  <h2>原神充值</h2>
-  <ul class="price-list">
-    <li>原石 60颗 - RM 20.00</li>
-    <li>原石 300颗 - RM 98.00</li>
-    <li>原石 980颗 - RM 320.00</li>
-    <li>原石 1980颗 - RM 600.00</li>
-  </ul>
-  <div class="recharge-process">
-    <h3>充值流程</h3>
-    <ol>
-      <li>访问网站并登录账户</li>
-      <li>选择原神游戏充值服务</li>
-      <li>输入游戏 UID</li>
-      <li>选择充值包</li>
-      <li>选择支付方式并支付</li>
-      <li>等待充值到账</li>
-    </ol>
-  </div>
-</div>
+    <section id="process" class="process-steps">
+      <h2>充值流程说明</h2>
+      <ol>
+        <li>访问网站并注册/登录账户。</li>
+        <li>选择原神游戏充值服务。</li>
+        <li>输入游戏账号 UID 或角色信息。</li>
+        <li>选择充值包并加入购物车。</li>
+        <li>选定支付方式并完成付款。</li>
+        <li>等待系统处理，一般几分钟内到账。</li>
+        <li>登录游戏确认到账，如有问题联系客服。</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 智能手游代充平台 版权所有
+  </footer>
 
 </body>
 </html>
